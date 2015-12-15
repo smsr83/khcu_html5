@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+table { width: 100%; }
+caption { visibility: hidden; width: 0; height: 0; font-size: 0; text-indent: -9999px; }
+.wa { width: auto; }
+
+/* 입학공지, 입학자료실 리스트 */
+.boardStyle01 { border-top: 2px solid #656d78; }
+.boardStyle01 .w60 { width: 40px; }
+.boardStyle01 .w70 { width: 50px; }
+.boardStyle01 .w100 { width: 60px; }
+.boardStyle01 .w110 { width: 80px; }
+.boardStyle01 .w390 { width: 390px; }
+.boardStyle01 th { height: 30px; border-bottom: 1px solid #dedede; font-weight: bold; color: #111111; }
+.boardStyle01 td { height: 29px; border-bottom: 1px solid #dedede; text-align: center; }
+.boardStyle01 td.num { color: #454545; }
+.boardStyle01 td.num img { width: 12px; }
+.boardStyle01 td.title { padding-left: 10px; text-align: left; color: #162635; }
+.boardStyle01 td.title.answer {
+	padding-left: 30px; background: url(../images/icon/m_icon_answer.gif) 10px 8px no-repeat;
+	-webkit-background-size: 16px;
+	background-size: 16px;
+	}
+.boardStyle01 td.title .new { display: none; }
+.boardStyle01 td.view { color: #454545; }
+.boardStyle01 td.date { color: #162635; }
+.boardStyle01 .notice td.title,
+.boardStyle01 .notice td.date { font-weight: bold; }
+.boardStyle01 td img { vertical-align: middle; }
+
+ /* 입학상담실 */
+.boardStyle01 td.file,
+.boardStyle01 td.view,
+.boardStyle01 .m_none { display: none; }
+
+/* 보도자료 리스트 */
+.boardStyle02 { border-top: 2px solid #656d78; }
+.boardStyle02 li { position: relative; min-height: 65px; padding: 10px 0 10px 122px; border-bottom: 1px solid #dddddd;}
+.boardStyle02 li .num { display: none; }
+.boardStyle02 li .image { position: absolute; left: 0; top: 10px; width: 107px; height: 65px; }
+.boardStyle02 li p { padding-top: 5px; margin-bottom: 10px; }
+.boardStyle02 li p span { margin-right: 5px; padding-right: 6px; background: url(../images/etc/bd11.png) right center no-repeat; font-size: 11px; color: #767676; }
+.boardStyle02 li p span:last-child { margin-right: 0; padding-right: 0; background: 0 none; }
+.boardStyle02 li p span:last-child img { width: 11px; }
+.boardStyle02 li dl { }
+.boardStyle02 li dt { margin-bottom: 5px; line-height: 16px;  font-weight: bold; color: #162635; }
+.boardStyle02 li dd { display: none; line-height: 18px; color: #454545; }
+
+/* 입학방문상담 신청 */
+.tb_type02 .w130 { width: 90px; }
+.tb_type02 .w150 { width: 150px; }
+.tb_type02 .w200 { width: 100px; }
+.tb_type02 .w50 { width: 50px; }
+.tb_type02 { margin-top: 10px; border-top: 2px solid #656d78; }
+.tb_type02 th { border-right: 1px solid #dedede; border-bottom: 1px solid #dedede; background-color: #f7f7f7; font-weight: normal; line-height: 16px; }
+.tb_type02 td { height: 24px; padding: 7px 0 7px 10px; border-bottom: 1px solid #dedede; color: #454545; }
+.tb_type02 td input,
+.tb_type02 td label,
+.tb_type02 td select { vertical-align: middle; color: #454545; }
+.tb_type02 td input[type="text"],
+.tb_type02 td input[type="password"] {
+	display: inline-block; height: 25px; border: 1px solid #dedede; text-indent: 5px; font-size: 13px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+.tb_type02 td select {
+	height: 25px; padding: 0 3px; border: 1px solid #dedede; background: #ffffff url(../images/sub/select_bg01.png) right 0 no-repeat; font-size: 13px;
+	-webkit-background-size: 25px;
+	background-size: 25px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	}
+.tb_type02 td .btn_date { float: left; width: 178px; height: 25px; padding-left: 30px; border: 1px solid #dedede; background: #ffffff url(../images/icon/icon_calender.gif) 5px 5px no-repeat; text-align: left; }
+.tb_type02 td .btn_zip,
+.tb_type02 td .btn_style { display: inline-block; height: 25px; margin-left: 5px; padding: 0 10px; border: 0 none; /* background-color: #707070; */ background-color: #4C6E8E; vertical-align: middle; font-size: 12px; line-height: 25px; color: #ffffff; }
+.tb_type02 td textarea { width: 100%; height: 80px; border: 1px solid #d9d9d9; }
+.tb_type02 td .bull01 { display: inline-block; margin: 0 5px; text-align: center; }
+.tb_type02 td .list_type01 { margin-top: 0; }
+.tb_type02 td p { line-height: 16px; color: #666666; }
+.tb_type02 td p br { display: none; }
+.tb_type02 td .w60 { width: 60px; }
+.tb_type02 td .w100 { width: 50px; }
+.tb_type02 td .w120 { width: 100px; }
+.tb_type02 td .w130 { width: 80px; }
+.tb_type02 td .w180 { width: 100px; }
+.tb_type02 td .w215 { width: 100%; }
+.tb_type02 td .w215.mr5 { margin-right: 0; margin-bottom: 5px; }
+.tb_type02 td .w250 { width: 150px; }
+.tb_type02 td .w300 { width: 100%; }
+.tb_type02 td .w320 { width: 100%; }
+.tb_type02 td .w444 { width: 150px; }
+.tb_type02 td .w520 { width: 100%; }
+.tb_type02 td .mt5 { margin-top: 5px; }
+.tb_type02 td .mt10 { margin-top: 5px; }
+.tb_type02 td .mr5 { margin-right: 5px; }
+.tb_type02 td .mr10 { margin-right: 10px; }
+.tb_type02 td .file_btn { position: absolute; left: 155px; top: 0; width: 70px; height: 25px; border: 0 none; background-color: #707070; color: #ffffff; }
+.tb_type02 td .file_btn { top: 0 \0/IE8+9; }
+.tb_type02 td .file_btn_hidden { position: absolute; left: 155px; top: 0; width: 70px; height: 25px; opacity: 0; cursor: pointer; filter: alpha(opacity=0); }
+.tb_type02 td .file_btn_hidden { top: 0 \0/IE8+9; }
+
+/* 지원서작성 */
+.tb_type02.tb_type02_02 th { padding-left: 10px; border-right: 1px solid #dedede; border-bottom: 1px solid #dedede; background-color: #f7f7f7; text-align: left; font-weight: bold; line-height: 18px; }
+.tb_type02.tb_type02_02 th span { margin-left: 5px; color: #b79362; }
+
+/* 지원서작성 - 자격증 입력(가로 thead) */
+.tb_type04 .w100 { width: 100px; }
+.tb_type04 .w130 { width: 60px; }
+.tb_type04 .w150 { width: 80px; }
+.tb_type04 .w210 { width: 210px; }
+.tb_type04 .w50 { width: 50px; }
+.tb_type04 .w50p { width: 50%; }
+.tb_type04 .w25p { width: 25%; }
+.tb_type04 { margin-top: 10px; border-top: 2px solid #656d78; }
+.tb_type04 th { height: 35px; border-right: 1px solid #dedede; border-bottom: 1px solid #dedede; background-color: #f7f7f7; text-align: center; line-height: 16px; }
+.tb_type04 th:last-child { border-right: 0 none; }
+.tb_type04 td { height: 24px; padding: 5px 5px 5px; border-right: 1px solid #dedede; border-bottom: 1px solid #dedede; text-align: center; color: #454545; }
+.tb_type04 td:last-child { border-right: 0 none; }
+.tb_type04 td input,
+.tb_type04 td label,
+.tb_type04 td select { vertical-align: middle; color: #454545; }
+.tb_type04 td input[type="radio"] { margin-right: 5px; }
+.tb_type04 td input[type="text"],
+.tb_type04 td input[type="password"] {
+	height: 25px; border: 1px solid #dedede; text-indent: 8px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+.tb_type04 .btn_add { height: 20px; padding: 0 8px; border: 0 none; background-color: #011c34; color: #ffffff; }
+.tb_type04 .btn_delete { width: 20px; height: 20px; border: 0 none; background: url(../images/btn/btn_cancle.png) 0 0 no-repeat; }
+.tb_type04 td .w110 { width: 100%; }
+.tb_type04 td .w130 { width: 100%; }
+.tb_type04 td .w330 { width: 100%; }
