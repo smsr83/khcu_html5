@@ -20,7 +20,7 @@ button,input,select,textarea{
 input,select,textarea{font-family:'Nanum Gothic','Apple SD Gothic Neo','malgun gothic','맑은 고딕','돋움','dotum';font-size: 12px;letter-spacing: -1px;}
 textarea{overflow:auto;vertical-align:top;resize: none;}
 button,input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;}
-button[disabled],input[disabled]{cursor:pointer;}
+button[disabled],input[disabled]{cursor:default;}
 b,strong{font-weight:bold;}
 dfn{font-style:italic;}
 pre{white-space:pre;white-space:pre-wrap;white-space:pre-line;white-space:-pre-wrap;white-space:-o-pre-wrap;white-space:-moz-pre-wrap;white-space:-hp-pre-wrap;word-wrap:break-word;}

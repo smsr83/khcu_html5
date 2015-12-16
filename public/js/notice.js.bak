@@ -103,6 +103,7 @@ $(function () {
     }
 
     $('#btnList').on('click', function () {
+		alert("df");
         list(1);
     });
     $('#btnWrite').on('click', write);

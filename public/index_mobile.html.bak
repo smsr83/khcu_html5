@@ -143,11 +143,6 @@
 		<!--<p class="mb5"><input type="text" /></p>
 		<p class="mb10"><input type="password" /></p>
 		<p><input type="submit" value="로그인" /></p>-->
-		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-
-<div id="status">
-</div>
 	</div>
 	<div class="inner in" style="display: none;"> <!-- 로그인시 -->
 		<dl>

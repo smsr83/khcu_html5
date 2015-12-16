@@ -69,7 +69,7 @@
 							<!-- btnArea -->
 							<div class="btnArea align_r">
 								<!--<input type="submit" id="send" value="글쓰기" />-->	<!--2015-12-15 del -->
-								 <button id="send">글쓰기</button>
+								 <!--<button id="send">글쓰기</button>-->
 								<!--<a href="./notice.html">목록</a>-->
 								<!--<input type="button" id="btnList" value="목록">-->
 							</div>
