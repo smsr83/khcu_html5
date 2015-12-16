@@ -130,9 +130,9 @@
 
 /* 공지사항 */
 .boardArea { padding-bottom: 15px; }
-.boardArea div { padding: 0 15px; }
+.boardArea div { padding: 15px 15px 0; }
 .boardArea div ul { padding: 0 10px; }
-.boardArea .bdBox01 li { display: block; overflow: hidden; height: 12px; margin-bottom: 13px; padding-left: 18px; background: url(../images/icon/bullet_dot02.gif) 5px center no-repeat; text-overflow: ellipsis; white-space: nowrap; }
+.boardArea .bdBox01 li { display: block; overflow: hidden; margin-bottom: 13px; padding-left: 18px; line-height:15px; background: url(../images/icon/bullet_dot02.gif) 5px center no-repeat; white-space: normal; }
 .boardArea .bdBox01 li:last-child { margin-bottom: 0; }
 .boardArea .bdBox01 li.new {
 	background: url(../images/icon/icon_new.gif) 1px center no-repeat;

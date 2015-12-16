@@ -1,0 +1,29 @@
+{
+  "name": "khcu_html5",
+  "version": "1.0.0",
+  "description": "승미 & 동귀",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mysql": "^2.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smsr83/khcu_html5.git"
+  },
+  "keywords": [
+    "khcu_html5"
+  ],
+  "author": "승미 & 동귀",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smsr83/khcu_html5/issues"
+  },
+  "homepage": "https://github.com/smsr83/khcu_html5#readme"
+}

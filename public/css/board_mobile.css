@@ -4,8 +4,8 @@ table { width: 100%; }
 caption { visibility: hidden; width: 0; height: 0; font-size: 0; text-indent: -9999px; }
 .wa { width: auto; }
 
-/* 입학공지, 입학자료실 리스트 */
-.boardStyle01 { border-top: 2px solid #656d78; }
+/* list */
+.boardStyle01 { border-top: 2px solid #656d78; margin-top:30px; }
 .boardStyle01 .w60 { width: 40px; }
 .boardStyle01 .w70 { width: 50px; }
 .boardStyle01 .w100 { width: 60px; }
@@ -28,25 +28,12 @@ caption { visibility: hidden; width: 0; height: 0; font-size: 0; text-indent: -9
 .boardStyle01 .notice td.date { font-weight: bold; }
 .boardStyle01 td img { vertical-align: middle; }
 
- /* 입학상담실 */
+ /*  */
 .boardStyle01 td.file,
 .boardStyle01 td.view,
 .boardStyle01 .m_none { display: none; }
 
-/* 보도자료 리스트 */
-.boardStyle02 { border-top: 2px solid #656d78; }
-.boardStyle02 li { position: relative; min-height: 65px; padding: 10px 0 10px 122px; border-bottom: 1px solid #dddddd;}
-.boardStyle02 li .num { display: none; }
-.boardStyle02 li .image { position: absolute; left: 0; top: 10px; width: 107px; height: 65px; }
-.boardStyle02 li p { padding-top: 5px; margin-bottom: 10px; }
-.boardStyle02 li p span { margin-right: 5px; padding-right: 6px; background: url(../images/etc/bd11.png) right center no-repeat; font-size: 11px; color: #767676; }
-.boardStyle02 li p span:last-child { margin-right: 0; padding-right: 0; background: 0 none; }
-.boardStyle02 li p span:last-child img { width: 11px; }
-.boardStyle02 li dl { }
-.boardStyle02 li dt { margin-bottom: 5px; line-height: 16px;  font-weight: bold; color: #162635; }
-.boardStyle02 li dd { display: none; line-height: 18px; color: #454545; }
-
-/* 입학방문상담 신청 */
+/* write */
 .tb_type02 .w130 { width: 90px; }
 .tb_type02 .w150 { width: 150px; }
 .tb_type02 .w200 { width: 100px; }
@@ -101,12 +88,12 @@ caption { visibility: hidden; width: 0; height: 0; font-size: 0; text-indent: -9
 .tb_type02 td .file_btn_hidden { position: absolute; left: 155px; top: 0; width: 70px; height: 25px; opacity: 0; cursor: pointer; filter: alpha(opacity=0); }
 .tb_type02 td .file_btn_hidden { top: 0 \0/IE8+9; }
 
-/* 지원서작성 */
+/*  */
 .tb_type02.tb_type02_02 th { padding-left: 10px; border-right: 1px solid #dedede; border-bottom: 1px solid #dedede; background-color: #f7f7f7; text-align: left; font-weight: bold; line-height: 18px; }
 .tb_type02.tb_type02_02 th span { margin-left: 5px; color: #b79362; }
 
 /* 지원서작성 - 자격증 입력(가로 thead) */
-.tb_type04 .w100 { width: 100px; }
+/*.tb_type04 .w100 { width: 100px; }
 .tb_type04 .w130 { width: 60px; }
 .tb_type04 .w150 { width: 80px; }
 .tb_type04 .w210 { width: 210px; }
@@ -133,4 +120,4 @@ caption { visibility: hidden; width: 0; height: 0; font-size: 0; text-indent: -9
 .tb_type04 .btn_delete { width: 20px; height: 20px; border: 0 none; background: url(../images/btn/btn_cancle.png) 0 0 no-repeat; }
 .tb_type04 td .w110 { width: 100%; }
 .tb_type04 td .w130 { width: 100%; }
-.tb_type04 td .w330 { width: 100%; }
+.tb_type04 td .w330 { width: 100%; }*/

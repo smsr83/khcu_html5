@@ -78,8 +78,8 @@ table .list_type01, table .list_type02, table .list_type03 { margin-top: 0; }
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	}
-.btnArea a.white { min-width: 60px; height: 25px; border: 1px solid #111111; background-color: #ffffff; color: #111111; }
-.btnArea input.white { border: 1px solid #111111; background-color: #ffffff; color: #111111; }
+/*.btnArea a.white { min-width: 60px; height: 25px; border: 1px solid #111111; background-color: #ffffff; color: #111111; }
+.btnArea input.white { border: 1px solid #111111; background-color: #ffffff; color: #111111; }*/
 .btnArea .gold { background-color: #a48254; }
 .btnArea a.db { height: 25px; padding: 0 10px; background-color: #4c6e8e; font-size: 12px; line-height: 25px; }
 .btnArea a:last-child,
@@ -121,32 +121,23 @@ table .list_type01, table .list_type02, table .list_type03 { margin-top: 0; }
 .btn_right input { vertical-align: top; }
 
 /* 페이지 */
-.paginate { display: table; width: 100%; margin-top: 20px; text-align: center; font-size: 0; }
-.paginate a { display: inline-block; vertical-align: top; }
-.paginate .first {
+#pagination { display: table; width: 100%; margin-top: 20px; text-align: center; font-size: 0; }
+#pagination a { display: inline-block; vertical-align: top; }
+#pagination .first {
 	width: 25px; height: 25px; margin-right: 5px; border: 1px solid #d9d9d9; background: url(../images/icon/icon_first.png) center center no-repeat; font-size: 0;
 	-webkit-background-size: 7px;
 	background-size: 7px;
 	}
-.paginate .prev {
-	width: 25px; height: 25px; margin-right: 10px; border: 1px solid #d9d9d9; background: url(../images/icon/icon_prev.png) center center no-repeat; font-size: 0;
-	-webkit-background-size: 5px;
-	background-size: 5px;
-	}
-.paginate .next { width: 25px; height: 25px; margin-left: 10px; border: 1px solid #d9d9d9; background: url(../images/icon/icon_next.png) center center no-repeat; font-size: 0;
-	-webkit-background-size: 5px;
-	background-size: 5px;
-	}
-.paginate .last {
+#pagination .arrow {  width: 25px; height: 25px; margin-right: -1px; border: 1px solid #d9d9d9; font-size: 12px; line-height: 25px; color: #000000; }
+#pagination .last {
 	width: 25px; height: 25px; margin-left: 5px; border: 1px solid #d9d9d9; background: url(../images/icon/icon_last.png) center center no-repeat; font-size: 0;
 	-webkit-background-size: 7px;
 	background-size: 7px;
 	}
-.paginate .num { width: 25px; height: 25px; margin-right: -1px; border: 1px solid #d9d9d9; font-size: 12px; line-height: 25px; color: #000000; }
-.paginate .num.on { width: 27px; height: 27px; border: 0 none; background-color: #122139; line-height: 27px; color: #ffffff; }
+#pagination .num { width: 25px; height: 25px; margin-right: -1px; border: 1px solid #000; font-size: 12px; line-height: 27px; background-color:#000; color: #fff; }
 
 /* 검색 영역 */
-.searchArea {
+/*.searchArea {
 	position: relative; display: table; width: 100%; margin-bottom: 10px; padding-right: 50px; text-align: center; font-size: 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -175,7 +166,7 @@ table .list_type01, table .list_type02, table .list_type03 { margin-top: 0; }
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	}
-.searchArea .txt { margin-right: 5px; font-size: 12px; font-weight: bold; }
+.searchArea .txt { margin-right: 5px; font-size: 12px; font-weight: bold; }*/
 
 /* 탭 영역 */
 .tabStyle01 { display: table; width: 100%; margin-bottom: 10px; } /* 입학방문 상담신청, FAQ */

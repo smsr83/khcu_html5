@@ -27,6 +27,7 @@ $(function () {
         }).done(function (res) {
             var msg = res[0];
             $('#vname').html( msg.id + ') ' + msg.name);
+			$('#vsubject').html( msg.id + ') ' + msg.subject);
             $('#vmessage').html(msg.message);
             
             if (!isBack) {
@@ -48,11 +49,12 @@ $(function () {
         }).done(function (res) {
             $('#list').html('');
             $.each(res.list, function (idx, msg) {
-                $('#list').append('<dt data-id=' + msg.id + '>' + msg.id + ') ' + msg.name + '</dt>');
-                $('#list').append('<dd>' + msg.message + '</dd>');
+				
+									
+				$('#list').append('<tr><td class="num">' + msg.id + '</td><td class="title">' + msg.subject + '</td><td class="date">2015.12.05</td></tr>');
             });
 
-            $('#list dt').on('click', function (evt) {
+            $('#list .title').on('click', function (evt) {
                 view($(evt.currentTarget).data('id'));
             });
 
@@ -74,16 +76,16 @@ $(function () {
                     if (!this.active)
                         return '<span>' + this.value + '</span>';
                     else if (this.value != this.page)
-                        return '<a href="#' + this.value + '">' + this.value + '</a>';
-                    return '<span class="current">' + this.value + '</span>';
+                        return '<a class="arrow" href="#' + this.value + '">' + this.value + '</a>';
+                    return '<a class="num">' + this.value + '</span>';
                     case 'next': // >
                         return '<a>&gt;</a>';
                     case 'prev': // <
                         return '<a>&lt;</a>';
                     case 'first': // [
-                        return '<a>first</a>';
+                        return '<a class="first">처음</a>';
                     case 'last': // ]
-                        return '<a>last</a>';
+                        return '<a class="last">마지막</a>';
                     }
                 }
             });
