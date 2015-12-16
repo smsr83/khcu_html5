@@ -7,6 +7,103 @@
 <title>HTML5&CSS3</title>
 <link rel="stylesheet" type="text/css" href="../css/base_mobile.css" />
 <link rel="stylesheet" type="text/css" href="../css/main_mobile.css" />
+
+<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/js/custom.js"></script>
+
+<script type="text/javascript" src="/js/jquery-scrolltofixed.js"></script>
+
+<script type="text/javascript">
+(function($) {
+	function fadeGallery(obj, timer){
+		var $speed = 500;
+		var $wrapper = "#" + obj;
+
+		var $sel = 0;
+		var flag = true
+
+		$($wrapper).find(".gallery").children("li:gt(0)").hide();
+		$($wrapper).find(".control").children("li:first-child").addClass("on");
+		if($($wrapper).find(".gallery").children("li").length==1){
+			return false;
+		}
+		function goNext(){
+			if(flag == true){
+				flag = false;
+				$sel++;
+				if($sel == $($wrapper).find(".gallery").children("li").size()){
+					$sel = 0;
+				}
+				$($wrapper).find(".control").children("li").eq($sel).addClass("on");
+				$($wrapper).find(".control").children("li").not($($wrapper).find(".control").children("li").eq($sel)).removeClass("on");
+				$($wrapper).find(".gallery").children("li")
+					.fadeOut()
+					.eq($sel).fadeIn(function(){flag = true;});
+			}
+			return false;
+		}
+		$($wrapper).find(".visual_next").click(goNext);
+
+		function goPrev(){
+			if(flag == true){
+				flag = false;
+				$sel--;
+				if($sel == -1){
+					$sel = $($wrapper).find(".gallery").children("li").size() - 1;
+				}
+				$($wrapper).find(".control").children("li").eq($sel).addClass("on");
+				$($wrapper).find(".control").children("li").not($($wrapper).find(".control").children("li").eq($sel)).removeClass("on");
+				$($wrapper).find(".gallery").children("li")
+					.fadeOut()
+					.eq($sel).fadeIn(function(){flag = true;});
+			}
+			return false;
+		}
+		$($wrapper).find(".links_prev").click(goPrev);
+
+		// 바로가기
+		function goDirect(){
+			if(flag == true && !$(this).parent().hasClass("on")){
+				flag = false;
+				$sel = $(this).parent().index();
+				$(this).parent("li").addClass("on");
+				$($wrapper).find(".control").children("li").not($(this).parent("li")).removeClass("on");
+				$($wrapper).find(".gallery").children("li")
+					.fadeOut()
+					.eq($sel).fadeIn(function(){flag = true;});
+			}
+			return false;
+		}
+		$($wrapper).find(".control a").click(goDirect);
+
+		// 자동실행
+		var autoPlay;
+		function autoChange(){
+			autoPlay = setInterval(goNext, timer);
+		}
+		autoChange();
+
+		// 컨트롤러
+		$($wrapper).find(".visual_stop").click(function(){
+			clearInterval(autoPlay);
+			$(".visual_stop").css("display","none");
+			$(".visual_play").css("display","inline-block");
+		});
+		$($wrapper).find(".visual_play").click(function(){
+			autoChange();
+			$(".visual_play").css("display","none");
+			$(".visual_stop").css("display","inline-block");
+		});
+	}
+
+	// 호출함수(아이디, 딜레이)
+	if($("#visual").length>0){
+		fadeGallery("visual", 4000);
+	}
+	// [END] fade in & out
+})(jQuery);
+</script>
 </head>
 <body>
 <!-- wrap -->
@@ -14,8 +111,7 @@
 	<!-- header_m -->
 	<div id="header_m">
 		<span class="open_menu"><img src="../images/btn/btn_menu.png" alt="" /></span>
-		<h1 class="logo"><a href="../index_mobile.html"><img src="../images/common/khcu_logo.gif" alt="입학지원센터 로고"></a></h1>
-		<span class="open_login"><img src="../images/btn/btn_login.png" alt="" /></span>
+		<h1 class="logo"><a href="../index_mobile.html"><img src="../images/common/khcu_logo.gif" alt="로고"></a></h1>
 	</div>
 	<!-- // header_m -->
 	<!-- container -->
@@ -122,9 +218,8 @@
 	<div class="inner">
 		<p>전체메뉴</p>
 		<ul class="oneDep">
-			<li><a href="../info/sub.html"><p><span>과목소개</span></p></a></li>
-			<li><a href="../board/notice.html"><p><span>궁금해요</span></p></a></li>
-			<li><a href="../member/write.html"><p><span>회원가입</span></p></a></li>		
+			<li><a href="/info/sub.html"><p><span>과목소개</span></p></a></li>
+			<li><a href="/notice.html"><p><span>궁금해요</span></p></a></li>	
 		</ul>
 		<!-- // 메뉴 끝 -->
 	</div>
@@ -132,132 +227,5 @@
 </div>
 <!-- // menuArea -->
 
-<!-- loginArea -->
-<div id="loginArea">
-	<span class="close_login"><img src="../images/common/login_close.png" alt="" /></span>
-	<div class="inner out"> <!-- 로그아웃시  -->
-		<dl>
-			<dt>LOGIN</dt>
-			<dd>KYUNGHEE CYBER UNIVERSITY<br />HTML5 & CSS3</dd>
-		</dl>
-		<!--<p class="mb5"><input type="text" /></p>
-		<p class="mb10"><input type="password" /></p>
-		<p><input type="submit" value="로그인" /></p>-->
-		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-
-<div id="status">
-</div>
-	</div>
-	<div class="inner in" style="display: none;"> <!-- 로그인시 -->
-		<dl>
-			<dt>My INFO</dt>
-			<dd>KYUNGHEE CYBER UNIVERSITY<br />HTML5 & CSS3</dd>
-		</dl>
-		<p><b>박동귀</b>님 환영합니다.</p>
-		<ul>
-			<li><input type="button" value="로그아웃" /></li>
-		</ul>
-	</div>
-</div>
-<!-- // loginArea -->
-
-<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="../js/custom.js"></script>
-<script type="text/javascript" src="../js/login.js"></script>
-
-<script type="text/javascript" src="../js/jquery-scrolltofixed.js"></script>
-
-<script type="text/javascript">
-(function($) {
-	function fadeGallery(obj, timer){
-		var $speed = 500;
-		var $wrapper = "#" + obj;
-
-		var $sel = 0;
-		var flag = true
-
-		$($wrapper).find(".gallery").children("li:gt(0)").hide();
-		$($wrapper).find(".control").children("li:first-child").addClass("on");
-		if($($wrapper).find(".gallery").children("li").length==1){
-			return false;
-		}
-		function goNext(){
-			if(flag == true){
-				flag = false;
-				$sel++;
-				if($sel == $($wrapper).find(".gallery").children("li").size()){
-					$sel = 0;
-				}
-				$($wrapper).find(".control").children("li").eq($sel).addClass("on");
-				$($wrapper).find(".control").children("li").not($($wrapper).find(".control").children("li").eq($sel)).removeClass("on");
-				$($wrapper).find(".gallery").children("li")
-					.fadeOut()
-					.eq($sel).fadeIn(function(){flag = true;});
-			}
-			return false;
-		}
-		$($wrapper).find(".visual_next").click(goNext);
-
-		function goPrev(){
-			if(flag == true){
-				flag = false;
-				$sel--;
-				if($sel == -1){
-					$sel = $($wrapper).find(".gallery").children("li").size() - 1;
-				}
-				$($wrapper).find(".control").children("li").eq($sel).addClass("on");
-				$($wrapper).find(".control").children("li").not($($wrapper).find(".control").children("li").eq($sel)).removeClass("on");
-				$($wrapper).find(".gallery").children("li")
-					.fadeOut()
-					.eq($sel).fadeIn(function(){flag = true;});
-			}
-			return false;
-		}
-		$($wrapper).find(".links_prev").click(goPrev);
-
-		// 바로가기
-		function goDirect(){
-			if(flag == true && !$(this).parent().hasClass("on")){
-				flag = false;
-				$sel = $(this).parent().index();
-				$(this).parent("li").addClass("on");
-				$($wrapper).find(".control").children("li").not($(this).parent("li")).removeClass("on");
-				$($wrapper).find(".gallery").children("li")
-					.fadeOut()
-					.eq($sel).fadeIn(function(){flag = true;});
-			}
-			return false;
-		}
-		$($wrapper).find(".control a").click(goDirect);
-
-		// 자동실행
-		var autoPlay;
-		function autoChange(){
-			autoPlay = setInterval(goNext, timer);
-		}
-		autoChange();
-
-		// 컨트롤러
-		$($wrapper).find(".visual_stop").click(function(){
-			clearInterval(autoPlay);
-			$(".visual_stop").css("display","none");
-			$(".visual_play").css("display","inline-block");
-		});
-		$($wrapper).find(".visual_play").click(function(){
-			autoChange();
-			$(".visual_play").css("display","none");
-			$(".visual_stop").css("display","inline-block");
-		});
-	}
-
-	// 호출함수(아이디, 딜레이)
-	if($("#visual").length>0){
-		fadeGallery("visual", 4000);
-	}
-	// [END] fade in & out
-})(jQuery);
-</script>
 </body>
 </html>

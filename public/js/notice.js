@@ -34,6 +34,10 @@ $(function () {
                 history.pushState(msg.id, msg.id + ') ' + msg.name, '/view/' + msg.id);
             }
         });
+
+		/*$('#btnModify').on('click', function (evt) {
+			modify($(evt.currentTarget).data('id'));
+		});*/
     }
 
     // 목록보기
@@ -51,11 +55,11 @@ $(function () {
             $.each(res.list, function (idx, msg) {
 				
 									
-				$('#list').append('<tr><td class="num">' + msg.id + '</td><td class="title">' + msg.subject + '</td><td class="date">' + msg.name + '</td></tr>');
+				$('#list').append('<tr><td class="num">' + msg.id + '</td><td class="title">' + msg.message + '</td><td class="date">' + msg.name + '</td></tr>');
             });
 
             $('#list .title').on('click', function (evt) {
-                view($(evt.currentTarget).data('id'));
+                modify($(evt.currentTarget).data('id'));
             });
 
             // pagination
@@ -96,6 +100,27 @@ $(function () {
         });
     }
 
+	// 수정
+    /*function modify(id, isBack) {
+        $('[id$=Panel]').hide();
+        $('#writePanel').show();
+        $.ajax({
+            url: '/save.json',
+            dataType: 'json',
+            cache: false,
+            data: {
+                id: id
+            }
+        }).done(function (res) {
+			$('#modi_send').show();
+			$('#send').hide();
+
+            if (!isBack) {
+                history.pushState(msg.id, msg.id + ') ' + msg.name, '/modify/' + msg.id);
+            }
+        });
+    }*/
+
     // 글쓰기
     function write() {
         $('[id$=Panel]').hide();
@@ -119,6 +144,10 @@ $(function () {
             if (fnStr === 'view') {
                 view(num, isBack);
             }
+
+			if (fnStr === 'modify') {
+                modify(num, isBack);
+            }
         }
     }
     updatePage();
@@ -128,6 +157,6 @@ $(function () {
         updatePage(event.state, true);
     });
     
-    list(1);
+   //list(1);
 
 });

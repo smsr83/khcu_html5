@@ -101,7 +101,7 @@ $(function () {
     }
 
 	// 수정
-    /*function modify(id, isBack) {
+    function modify(id, isBack) {
         $('[id$=Panel]').hide();
         $('#writePanel').show();
         $.ajax({
@@ -119,7 +119,7 @@ $(function () {
                 history.pushState(msg.id, msg.id + ') ' + msg.name, '/modify/' + msg.id);
             }
         });
-    }*/
+    }
 
     // 글쓰기
     function write() {

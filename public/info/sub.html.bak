@@ -117,8 +117,8 @@
 	<div class="inner">
 		<p>전체메뉴</p>
 		<ul class="oneDep">
-			<li><a href="/info/sub.html"><p><span>과목소개</span></p></a></li>
-			<li><a href="/notice.html"><p><span>궁금해요</span></p></a></li>		
+			<li><a href="../info/sub.html"><p><span>과목소개</span></p></a></li>
+			<li><a href="../board/notice.html"><p><span>궁금해요</span></p></a></li>		
 		</ul>
 		<!-- // 메뉴 끝 -->
 	</div>
