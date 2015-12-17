@@ -56,9 +56,9 @@ app.post('/modify.json', function (req, res) {	// 2015-12-17 add
 });
 
 // 삭제
-app.post('/del.json', function (req, res) {	// 2015-12-17 add
+app.post('/del.json', function (req) {	// 2015-12-17 add
 	var id = req.param('id'); 
-	del(id, res);
+	del(id);
 });
 
 // 상세보기
@@ -106,7 +106,7 @@ function modify(message, res) {
 }
 
 // 삭제하기
-function del(message, res) {
+function del(message) {
 	var query = connection.query('delete from board where id = ' +
                                  connection.escape(id), function (err, result) {
         var resultObj = {};

@@ -27,7 +27,7 @@ $(function () {
         }).done(function (res) {
             var msg = res[0];
             $('#vname').html( msg.id + ') ' + msg.name);
-			$('#vsubject').html( msg.id + ') ' + msg.subject);
+			/*$('#vsubject').html( msg.id + ') ' + msg.subject);*/
             $('#vmessage').html(msg.message);
             
             if (!isBack) {
@@ -36,7 +36,11 @@ $(function () {
         });
 
 		$('#btnModify').on('click', function (evt) {
-			modify($(evt.currentTarget).data('id'));
+			modify(id);
+		});
+
+		$('#btnDelete').on('click', function (evt) {
+			del(id);
 		});
     }
 
@@ -55,11 +59,11 @@ $(function () {
             $.each(res.list, function (idx, msg) {
 				
 									
-				$('#list').append('<tr><td class="num">' + msg.id + '</td><td class="title">' + msg.message + '</td><td class="date">' + msg.name + '</td></tr>');
+				$('#list').append('<tr><td class="num">' + msg.id + '</td><td data-id="'+msg.id+'" class="title">' + msg.message + '</td><td class="date">' + msg.name + '</td></tr>');
             });
 
             $('#list .title').on('click', function (evt) {
-                modify($(evt.currentTarget).data('id'));
+                view($(evt.currentTarget).data('id'));
             });
 
             // pagination
@@ -101,11 +105,11 @@ $(function () {
     }
 
 	// 수정
-    /*function modify(id, isBack) {
+    function modify(id, isBack) {
         $('[id$=Panel]').hide();
-        $('#writePanel').show();
+        $('#modifyPanel').show();
         $.ajax({
-            url: '/save.json',
+            url: '/modify.json',
             dataType: 'json',
             cache: false,
             data: {
@@ -115,11 +119,35 @@ $(function () {
 			$('#modi_send').show();
 			$('#send').hide();
 
+			var msg = res[0];
+            $('#name').html( msg.id + ') ' + msg.name);
+			/*$('#subject').html( msg.id + ') ' + msg.subject);*/
+            $('#message').html(msg.message);
+
             if (!isBack) {
                 history.pushState(msg.id, msg.id + ') ' + msg.name, '/modify/' + msg.id);
             }
         });
-    }*/
+    }
+
+	// 삭제하기
+    function del(id, isBack) {
+        $('[id$=Panel]').hide();
+        $('#listPanel').show();
+        $.ajax({
+            url: '/del.json',
+            dataType: 'json',
+            cache: false,
+            data: {
+                id: id
+            }
+        }).done(function (res.id) {            
+            
+            if (!isBack) {
+                //history.pushState(msg.id, msg.id + ') ' + msg.name, '/view/' + msg.id);
+            }
+        });
+    }
 
     // 글쓰기
     function write() {
@@ -157,6 +185,6 @@ $(function () {
         updatePage(event.state, true);
     });
     
-   //list(1);
+   list(1);
 
 });

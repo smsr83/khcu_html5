@@ -85,6 +85,65 @@
 	</div>
 	<!-- // writePanel -->
 
+	<!-- modifyPanel -->	<!-- 2015-12-18 add -->
+	<div id="modifyPanel" class="subContainer">		
+		<div class="area_ct">			
+			<!-- subContents -->
+			<div id="subContents">
+				<!-- location -->
+				<div class="location">
+					<h3>궁금해요</h3>					
+				</div>
+				<!-- // location -->
+				<!-- writeArea -->				
+				<div class="writeArea">			
+					<form id="msgform" name="msgform" onsubmit="return false;">
+							<!-- tb_type02 -->
+							<div class="tb_type02">
+								<table>
+									<caption>Q&ampA 글쓰기(제목,구분,작성자,이메일,연락처,내용,첨부파일,비밀번호</caption>
+									<colgroup>
+										<col class="w130" />
+										<col class="wa" />
+									</colgroup>
+									
+									<tbody>
+										<tr>
+											<th scope="row">이름</th>
+											<td><input class="w130" type="text" name="name" id="name" required /></td>
+										</tr>
+										<tr>
+											<th scope="row">이메일</th>
+											<td>
+												<input type="text" name="email" id="email" class="w190" />
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">내용</th>
+											<td>
+												<textarea name="msg" id="msg" placeholder="leave message" required></textarea>												
+											</td>
+										</tr>
+									</tbody>
+									
+								</table>
+							</div>
+							<!-- // tb_type02 -->
+							<!-- btnArea -->
+							<div class="btnArea align_r">
+								<!--<input type="button" id="modi_send" value="수정하기" />	-->
+								<input type="button" id="send" value="글쓰기" />	
+							</div>
+							<!-- // btnArea -->
+							</form>
+				</div>
+				<!-- // writeArea -->
+			</div>
+			<!-- // subContents -->
+		</div>
+	</div>
+	<!-- // writePanel -->
+
 	<!-- viewPanel -->
 	<div id="viewPanel" class="subContainer" style="display: none;">
 		<div class="area_ct">			
